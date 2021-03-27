@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function encryption(){
+            var i = prompt("需要进行加密,请输入一个四位的整数");
+            var i_one = i%1000%100%10;
+            var i_two = i%1000%100-i_one;
+            var i_three = i%1000-i_two-i_one;
+            var i_four = i-i_three-i_two-i_one;
+            alert("这是你加密后的数:"+((i_one/1+5)%10*1 + (i_two/10+5)%10*10 + (i_three/100+5)%10*100 + (i_four/1000+5)%10*1000));
+        }
+        encryption();
+    </script>
+</body>
+</html>
